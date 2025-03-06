@@ -16,7 +16,6 @@ RUN apt-get update && apt-get install -y \
 RUN pecl install mongodb && docker-php-ext-enable mongodb
 RUN pecl install rdkafka && docker-php-ext-enable rdkafka
 RUN pecl install swoole --configure-options="--enable-brotli=no" && docker-php-ext-enable swoole
-RUN pecl install redis && docker-php-ext-enable redis
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 

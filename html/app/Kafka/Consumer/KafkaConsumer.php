@@ -15,7 +15,7 @@ class KafkaConsumer extends AbstractConsumer
     public function consume(ConsumeMessage $message)
     {
         (new Log)->collection->insertOne([
-            'event' => $message->getValue(),
+            'event' => json_decode($message->getValue()),
             'topic' => $message->getTopic(),
             'partition' => $message->getPartition(),
             'key' => $message->getKey()

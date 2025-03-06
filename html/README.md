@@ -18,7 +18,6 @@ When you don't want to use Docker as the basis for your running environment, you
  - Pcntl PHP extension
  - OpenSSL PHP extension （If you need to use the HTTPS）
  - PDO PHP extension （If you need to use the MySQL Client）
- - Redis PHP extension （If you need to use the Redis Client）
  - Protobuf PHP extension （If you need to use the gRPC Server or Client）
 
 # Installation using Composer
